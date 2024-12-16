@@ -8,7 +8,13 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import { Canvas, LinearGradient, Rect, vec } from "@shopify/react-native-skia";
+import {
+  Canvas,
+  Line,
+  LinearGradient,
+  Rect,
+  vec,
+} from "@shopify/react-native-skia";
 import { useApplicationDimensions } from "@/hooks/useApplicationDimensions";
 
 const HomeBackground = () => {
@@ -21,7 +27,7 @@ const HomeBackground = () => {
   const styles = makeStyles(dimensions);
 
   return (
-    <>
+    <View style={{ ...StyleSheet.absoluteFillObject }}>
       <Canvas style={{ flex: 1 }}>
         <Rect x={0} y={0} width={width} height={height}>
           <LinearGradient
@@ -39,9 +45,10 @@ const HomeBackground = () => {
         <Canvas style={{ height: smokeHeight, top: smokeOffset }}>
           <Rect x={0} y={0} width={width} height={smokeHeight}>
             <LinearGradient
-              start={vec(0, 0)}
-              end={vec(width, smokeHeight)}
-              colors={["#2E335A", "#1C1B33"]}
+              start={vec(width / 2, 0)}
+              end={vec(width / 2, smokeHeight)}
+              colors={["#00000000", "rgba(58, 63, 84, 1)"]}
+              positions={[-0.02, 0.54]}
             />
           </Rect>
         </Canvas>
@@ -50,7 +57,7 @@ const HomeBackground = () => {
           style={styles.houseImage}
         />
       </ImageBackground>
-    </>
+    </View>
   );
 };
 
