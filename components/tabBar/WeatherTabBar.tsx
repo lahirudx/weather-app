@@ -1,7 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import ArcComponent from "./elements/ArcComponent";
+
+import { StyleSheet, Text, View } from "react-native";
+
 import { useApplicationDimensions } from "@/hooks/useApplicationDimensions";
+
+import ArcComponent from "./elements/ArcComponent";
 import TabBarItems from "./elements/TabBarItems";
 
 export default function WeatherTabBar() {

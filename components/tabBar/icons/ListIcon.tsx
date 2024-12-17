@@ -1,5 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+
+import { StyleSheet, Text, View } from "react-native";
+
 import { Canvas, Path } from "@shopify/react-native-skia";
 
 export default function ListIcon() {

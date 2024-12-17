@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   Image,
   ImageBackground,
@@ -7,7 +9,7 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-import React from "react";
+
 import {
   Canvas,
   Line,
@@ -15,6 +17,7 @@ import {
   Rect,
   vec,
 } from "@shopify/react-native-skia";
+
 import { useApplicationDimensions } from "@/hooks/useApplicationDimensions";
 
 const HomeBackground = () => {
