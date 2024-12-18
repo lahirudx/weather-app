@@ -18,14 +18,11 @@ export default function WeatherInfo({ weather }: WeatherInfoProps) {
     <View style={{ marginTop: weatherInfoMargin, alignItems: "center" }}>
       <Text style={styles.cityText}>{city}</Text>
       <Text style={styles.temperatureText}>
-        {temperature}
-        {DEGREE_SYMBOL}
+        {`${temperature}${DEGREE_SYMBOL}`}
       </Text>
       <Text style={styles.conditionText}>{condition}</Text>
       <Text style={styles.minMaxText}>
-        H:{high}
-        {DEGREE_SYMBOL} L:{low}
-        {DEGREE_SYMBOL}
+        {`H:${high}${DEGREE_SYMBOL}    L:${low}${DEGREE_SYMBOL}`}
       </Text>
     </View>
   );
